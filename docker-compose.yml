@@ -1,0 +1,23 @@
+version: '3'
+services:
+  tarin:
+    image: dilshadbanu/phonepaytrain:v1
+    ports:
+      - "8005:80"
+    deploy:
+      replicas: 3
+
+  movie:
+    image: dilshadbanu/phonepaymovie:v1
+    ports:
+      - "8006:80"
+    deploy:
+      replicas: 3
+      
+  recharge:
+    image: dilshadbanu/phonepayrecharge:v1
+    ports:
+      - "8007:80"
+    deploy:
+      replicas: 
+
